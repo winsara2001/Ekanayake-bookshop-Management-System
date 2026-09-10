@@ -1,0 +1,63 @@
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+/* Order Statuses */
+.order-pending {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.order-confirmed {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.order-processing {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+}
+
+.order-ready_for_collection {
+  background-color: #fce7f3;
+  color: #db2777;
+}
+
+.order-completed {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.order-cancelled {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+/* Payment Statuses */
+.payment-pending {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.payment-paid_demo, .payment-paid {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.payment-failed {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+
+.payment-refunded {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}

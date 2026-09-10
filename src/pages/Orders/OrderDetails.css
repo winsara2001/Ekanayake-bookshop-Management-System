@@ -1,0 +1,348 @@
+.order-details-page {
+  padding: 3rem 0 8rem;
+  background-color: var(--color-bg);
+  min-height: calc(100vh - 80px);
+}
+
+.back-to-orders {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.back-to-orders:hover {
+  color: var(--color-accent);
+}
+
+.order-title-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.order-details-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.order-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.order-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.order-timeline-card,
+.order-items-card,
+.order-summary-card,
+.order-info-card {
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 0 0.5rem;
+  position: relative;
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 2;
+  width: 60px;
+}
+
+.step-indicator {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #e2e8f0;
+  border: 4px solid white;
+  box-shadow: 0 0 0 1px #cbd5e1;
+  transition: all 0.3s ease;
+}
+
+.timeline-step.active .step-indicator {
+  background-color: var(--color-accent);
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+.step-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+  text-align: center;
+}
+
+.timeline-step.active .step-label {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.timeline-connector {
+  flex: 1;
+  height: 3px;
+  background-color: #e2e8f0;
+  margin: -20px 0 0;
+  z-index: 1;
+}
+
+/* Assuming simple logic where previous connectors should be colored if active */
+.timeline-step.active + .timeline-connector,
+.timeline-step.active + .timeline-connector + .timeline-step.active {
+  background-color: var(--color-accent);
+}
+
+.timeline-cancelled {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* Items List */
+.order-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order-item-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.order-item-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.order-item-image {
+  width: 60px;
+  height: 85px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.order-item-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.order-item-info {
+  flex: 1;
+}
+
+.order-item-title {
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.order-item-title:hover {
+  color: var(--color-accent);
+}
+
+.order-item-author {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.order-item-qty-price {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.qty-badge {
+  background-color: #f1f5f9;
+  color: #475569;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.unit-price {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.order-item-subtotal {
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: 1.05rem;
+}
+
+/* Sidebar Info Blocks */
+.info-block {
+  margin-bottom: 1.25rem;
+}
+
+.info-block:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+
+.info-value {
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.demo-note {
+  font-size: 0.75rem;
+  color: #8b5cf6;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+/* Cancellation */
+.cancellation-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  border: 1px solid #fee2e2;
+}
+
+.btn-cancel-order {
+  width: 100%;
+  color: #ef4444;
+  border-color: #fca5a5;
+}
+
+.btn-cancel-order:hover {
+  background-color: #fef2f2;
+  border-color: #ef4444;
+}
+
+.cancel-confirm-box {
+  background-color: #fef2f2;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid #fca5a5;
+}
+
+.cancel-confirm-box p {
+  color: #991b1b;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.cancel-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.cancel-actions .btn {
+  flex: 1;
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  color: white;
+  border: 1px solid #ef4444;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+}
+
+.cancel-note {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .order-details-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+  
+  .timeline-connector {
+    display: none;
+  }
+  
+  .timeline-step {
+    flex-direction: row;
+    width: auto;
+  }
+  
+  .step-indicator {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-item-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .order-item-image {
+    display: none; /* Hide image on very small screens to save space */
+  }
+  
+  .order-item-subtotal {
+    align-self: flex-end;
+  }
+}

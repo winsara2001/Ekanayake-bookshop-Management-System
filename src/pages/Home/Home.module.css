@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+.funnelWrapper {
+  background-color: #050505;
+  color: #f0f0f0;
+  font-family: var(--font-primary);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  /* Isolated styles to not leak out */
+}
+
+/* Background Gradients */
+.ambientGlow1 {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.25) 0%, rgba(219, 39, 119, 0.15) 30%, transparent 70%);
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ambientGlow2 {
+  position: absolute;
+  top: 30%;
+  right: -20%;
+  width: 70vw;
+  height: 70vw;
+  background: radial-gradient(circle, rgba(162, 28, 175, 0.2) 0%, rgba(236, 72, 153, 0.1) 40%, transparent 70%);
+  filter: blur(120px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.funnelContainer {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Typography */
+.serifText {
+  font-family: 'Playfair Display', serif;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, #e879f9, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero Section */
+.heroSection {
+  padding: 6rem 0 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroTop {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .heroTop {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.heroLeft {
+  flex: 1;
+  max-width: 480px;
+}
+
+.heroHeading {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.heroSubtext {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #a3a3a3;
+}
+
+.heroRight {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Glass Card */
+.glassCard {
+  background: rgba(20, 20, 25, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  max-width: 420px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.bookImageContainer {
+  width: 140px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.bookImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.glassCardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.glassCardBadge {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #a855f7;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.glassCardTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.glassCardText {
+  font-size: 0.8rem;
+  color: #a3a3a3;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.glassCardLink {
+  font-size: 0.85rem;
+  color: #e879f9;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.glassCardLink:hover {
+  color: #f0abfc;
+}
+
+/* Middle Text & Button */
+.heroMiddle {
+  max-width: 650px;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.heroMiddleText {
+  font-size: 0.95rem;
+  color: #d4d4d4;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.exploreBtn {
+  background: #f8fafc;
+  color: #0f172a;
+  border: none;
+  border-radius: 30px;
+  padding: 0.85rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.exploreBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Journey Section */
+.journeySection {
+  background-color: #000000;
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.journeyPrehead {
+  font-size: 0.8rem;
+  color: #737373;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.journeyHeading {
+  font-size: 2.75rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.journeySubtext {
+  max-width: 580px;
+  margin: 0 auto 4rem;
+  font-size: 1rem;
+  color: #a3a3a3;
+  line-height: 1.6;
+}
+
+.journeyImagePlaceholder {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  background: #111;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  position: relative;
+}
+
+.journeyImagePlaceholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+/* Sparkles */
+.sparkle {
+  position: absolute;
+  color: #f472b6;
+  opacity: 0.8;
+  animation: pulseSparkle 3s infinite ease-in-out;
+}
+
+@keyframes pulseSparkle {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.5; }
+  50% { transform: scale(1.3) rotate(90deg); opacity: 1; }
+}

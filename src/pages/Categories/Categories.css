@@ -1,0 +1,52 @@
+.categories-page {
+  padding: 4rem 0 8rem;
+  background-color: var(--color-bg);
+  min-height: calc(100vh - 80px);
+}
+
+.categories-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.categories-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.categories-subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.categories-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .categories-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .categories-page-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .categories-header {
+    margin-bottom: 2.5rem;
+  }
+  
+  .categories-title {
+    font-size: 2rem;
+  }
+}

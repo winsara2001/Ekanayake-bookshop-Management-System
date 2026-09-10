@@ -1,0 +1,29 @@
+.home-page {
+  padding: 30px 15px;
+}
+
+.home-layout {
+  display: flex;
+  gap: 30px;
+}
+
+.home-sidebar {
+  width: 25%;
+  flex-shrink: 0;
+}
+
+.home-main-content {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (max-width: 992px) {
+  .home-layout {
+    flex-direction: column;
+  }
+  .home-sidebar, .home-main-content {
+    width: 100%;
+  }
+}

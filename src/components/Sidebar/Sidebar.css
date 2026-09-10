@@ -1,0 +1,98 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sidebar-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.sidebar-banner .placeholder-banner {
+  color: white;
+  padding: 40px 20px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.sidebar-banner .placeholder-banner:hover {
+  transform: translateY(-5px);
+}
+
+/* News Section */
+.news-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+.news-date {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+.news-date span {
+  font-size: 0.75rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.news-content h4 {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+.news-content p {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Newsletter Section */
+.sidebar-newsletter {
+  background: var(--color-primary);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: var(--radius-sm);
+}
+.sidebar-newsletter h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.sidebar-newsletter p {
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+.sidebar-newsletter input {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
+  color: #333;
+  height: 40px;
+}
+.sidebar-newsletter button {
+  width: 100%;
+  background: white;
+  color: var(--color-primary);
+  height: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-sm);
+}
+.sidebar-newsletter button:hover {
+  background: #f0f0f0;
+}

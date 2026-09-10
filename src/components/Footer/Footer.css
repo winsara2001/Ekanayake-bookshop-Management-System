@@ -1,0 +1,75 @@
+.koparion-footer {
+  width: 100%;
+}
+
+
+.footer-main {
+  background: #252525;
+  color: #aaa;
+  padding: 60px 0;
+}
+
+.footer-main-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.footer-col h4 {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footer-col ul a:hover {
+  color: var(--color-primary);
+}
+
+.store-info-list li {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  background: #1a1a1a;
+  padding: 20px 0;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+@media (max-width: 768px) {
+  .footer-top-inner { flex-direction: column; gap: 20px; align-items: flex-start; }
+  .footer-main-inner { grid-template-columns: repeat(2, 1fr); }
+  .footer-bottom-inner { flex-direction: column; gap: 10px; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .footer-main-inner { grid-template-columns: 1fr; }
+}
